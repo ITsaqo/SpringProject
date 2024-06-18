@@ -14,7 +14,7 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    @KafkaListener(topics = "my-topic", groupId = "my-group")
+    @KafkaListener (topics = "my-topic", groupId = "my-group")
     public void listen(String messageContent) {
         User user = new User();
         user.setContent(messageContent);
